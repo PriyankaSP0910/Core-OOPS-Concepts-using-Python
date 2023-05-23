@@ -1,0 +1,87 @@
+class student:
+        def __init__(self):
+                self.name=input("Enter your name ")
+                self.age=int(input("Enter your age "))
+                self.usn=input("Enter your USN ")
+        def display1(self):
+                print(f"\nName :{self.name}\nAge :{self.age}\nUSN : {self.usn}")
+class ugstudent(student):
+        def __init__(self):
+                super().__init__()
+                self.stipend=int(input("Enter your stipend "))
+                self.semester=int(input("Enter your semester "))
+                self.salary=int(input("Enter your salary "))
+        def display(self):
+                print(f"Stipend :{self.stipend}\nSemester :{self.semester}\nsalary : {self.salary}\n")
+class pgstudent(student):
+        def __init__(self):
+                super().__init__()
+                self.stipend=int(input("Enter your stipend "))
+                self.semester=int(input("Enter your semester "))
+                self.salary=int(input("Enter your salary"))
+        def display(self):
+                print(f"Stipend :{self.stipend}\nSemester :{self.semester}\nsalary : {self.salary}\n")
+while(True):
+        print("\n1.ugstudent\n2.pgstudent\n3.exit")
+        ch=int(input("Enter your choice "))
+        if(ch == 1):
+                u=ugstudent()
+                u.display1()
+                u.display()
+        elif(ch == 2):
+                p=pgstudent()
+                p.display1()
+                p.display()
+        elif(ch == 3):
+                break
+        else:
+                print("Invalid choice")
+
+
+
+d={}
+class student:
+        def __init__(self):
+                self.name=input("Enter your name ")
+                self.age=int(input("Enter your age "))
+                self.usn=input("Enter your USN ")
+        def display1(self):
+                print(f"Name :{self.name}\nAge :{self.age}\nUSN : {self.usn}\n")
+class derived1(student):
+        def __init__(self):
+                super().__init__()
+                self.sub=[]
+                self.total=0
+                for i in range(1,6):
+                        mark=int(input("Enter the marks "))
+                        self.sub.append(mark)
+                        self.total+=mark
+                self.perc=(self.total/250)*100
+        def display(self):
+                print(f"Subject marks :{self.sub}")
+                print(f"Total :{self.total}\nPercentage :{self.perc}\n")
+class derived2(derived1):
+        def __init__(self):
+                super().__init__()
+                d.update({self.name:{"name":self.name,"age":self.age,"usn":self.usn,"total":self.total,"percentage":self.perc}});
+        def displaydictionary():
+                for key in d:
+                        print(key,d[key])
+while(True):
+        print("1.add\n2.display\n3.exit")
+        ch=int(input("Enter you choice "))
+        if(ch == 1):
+                d2=derived2()
+                d2.display1()
+                d2.display()
+        elif(ch == 2):
+                derived2.displaydictionary()
+        elif(ch == 3):
+                break
+        else:
+                print("Invalid choice ")
+
+
+
+
+
