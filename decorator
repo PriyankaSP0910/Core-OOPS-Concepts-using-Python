@@ -1,0 +1,29 @@
+import time
+def timit(func):
+        def timed():
+                ts = time.time()
+                print("Start time: ", ts)
+                result = func()
+                te=time.time()
+                print("End time: ", te)
+                print("Total Time taken: ", te-ts)
+                return result
+        return timed
+
+def fibs():
+        a,b=0,1
+        while True:
+                yield a
+                a,b=b,a+b
+
+n = int(input("Enter size: "))
+
+@timit
+def my():
+        fib = fibs()
+        for x in range(n):
+                print(next(fib))
+
+my()
+
+
