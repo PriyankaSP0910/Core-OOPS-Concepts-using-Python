@@ -1,0 +1,31 @@
+class Employee:
+        increment=1.5
+        def __init__(self):
+                self.fname=input("Enter first name ")
+                self.lname=input("Enter last name ")
+                self.empid=input("Enter Employee ID ")
+                self.pay=int(input("Enter pay"))
+        def display(self):
+                print(f"\n Name:{self.fname} {self.lname}\nID:{self.empid}\nPay:{self.pay}\n")
+        def pay_raise(self):
+                self.payme=self.pay*self.increment
+                print(f"Employee {self.fname} {self.lname} pay: {self.payme} ")
+class Developer(Employee):
+        def pay_raise(self):
+                self.increment=2.5
+                self.payme=self.pay*self.increment
+                print(f"Manager {self.fname} {self.lname} pay : {self.payme} ")
+class Manager(Employee):
+        def pay_raise(self):
+                self.increment=3.5
+                self.payme=self.pay*self.increment
+                print(f"Developer {self.fname} {self.lname} pay : {self.payme} ")
+m=Manager()
+d=Developer()
+e=Employee()
+e.display()
+e.pay_raise()
+m.display()
+m.pay_raise()
+d.display()
+d.pay_raise()
