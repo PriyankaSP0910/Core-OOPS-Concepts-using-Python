@@ -1,3 +1,4 @@
+//decorator 
 import time
 def timit(func):
         def timed():
